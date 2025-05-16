@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClienteController {
 
-    @Value("hola")
+    @Value("desde el repo grupal")
     private String UsuariosTareas;
 
     @GetMapping("/mostrar-config")
