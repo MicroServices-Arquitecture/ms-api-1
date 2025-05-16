@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: usuarios-tareas
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8080
+
