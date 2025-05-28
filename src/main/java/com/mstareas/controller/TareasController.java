@@ -42,11 +42,24 @@ public class TareasController {
         }
     }
 
-    @GetMapping("/tasks/{taskId}")
+    @GetMapping("/tasks/id/{taskId}")
     @Operation(summary = "Get record for id", description = "Show 1 task pro id")
     public ResponseEntity<Tasks> getTask(@PathVariable String taskId) {
         
         Tasks task = service.getTask(taskId);
+
+        if (task != null){
+            return ResponseEntity.ok(task);
+        } else{
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/tasks/name/{name}")
+    @Operation(summary = "Get record for name", description = "Show 1 task pro name")
+    public ResponseEntity<Tasks> getName(@RequestParam String taskName) {
+        
+        Tasks task = service.getName(taskName);
 
         if (task != null){
             return ResponseEntity.ok(task);

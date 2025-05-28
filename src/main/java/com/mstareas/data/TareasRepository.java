@@ -4,8 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.mstareas.model.pojo.Tasks;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface TareasRepository extends JpaRepository<Tasks, Long> {
-    List<Tasks> findByName(String name);
+    Optional<Tasks> findByName(String name);
 }

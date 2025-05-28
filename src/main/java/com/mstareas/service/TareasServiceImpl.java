@@ -1,5 +1,6 @@
 package com.mstareas.service;
 
+import org.apache.tomcat.util.net.openssl.OpenSSLStatus.Name;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -26,6 +27,11 @@ public class TareasServiceImpl implements TareasService {
     @Override
     public Tasks getTask(String taskId){
         return repository.findById(Long.valueOf(taskId)).orElse(null);
+    }
+
+    @Override
+    public Tasks getName(String taskName){
+        return repository.findByName(taskName).orElse(null);
     }
     
     @Override

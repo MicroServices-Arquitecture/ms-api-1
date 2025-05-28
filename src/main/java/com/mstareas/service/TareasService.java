@@ -14,6 +14,8 @@ public interface TareasService {
 
     Tasks getTask(String taskId);
 
+    Tasks getName(String taskName);
+
     Boolean removeTask(String taskId);
 
     Tasks createTask(CreateTaskResquest request);
