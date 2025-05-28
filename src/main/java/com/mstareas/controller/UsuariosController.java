@@ -40,7 +40,7 @@ public class UsuariosController {
     }
 
     // 📌 Crear nuevo usuario
-    @PostMapping("/usuarios")
+    @PostMapping("/User")
     @Operation(summary = "Create a new record")
     public UsuarioDTO crear(@RequestBody UsuariosRequest dto) {
         Usuario nuevo = usuariosRepository.save(toEntity(dto));

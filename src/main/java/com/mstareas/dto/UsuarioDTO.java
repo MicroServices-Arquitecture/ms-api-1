@@ -1,5 +1,9 @@
 package com.mstareas.dto;
 
+import lombok.Builder;
+
+@Builder
+
 public class UsuarioDTO {
 
     private Long id;

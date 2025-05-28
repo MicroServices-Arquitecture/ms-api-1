@@ -40,6 +40,10 @@ public class UsuarioService {
             usuario.setMobile(usuarioDetails.getMobile());
             return usuarioRepository.save(usuario);
         }
+        Usuario user = Usuario.builder()
+        .name(usuarioDetails.getName())
+        .email(usuarioDetails.getEmail()).build();
+
         return null;
     }
 
