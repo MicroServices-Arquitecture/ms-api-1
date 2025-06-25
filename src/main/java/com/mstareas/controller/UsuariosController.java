@@ -6,6 +6,7 @@ import com.mstareas.model.request.UsuariosRequest;
 import com.mstareas.service.UsuarioServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.extern.slf4j.Slf4j;
 
 import com.mstareas.data.UsuarioRepository;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 //@RequestMapping("/usuarios")
+@Slf4j
 public class UsuariosController {
 
     private final UsuarioRepository usuariosRepository;
