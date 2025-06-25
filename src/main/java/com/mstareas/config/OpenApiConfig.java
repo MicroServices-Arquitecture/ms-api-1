@@ -15,7 +15,7 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI customOpenAPI(){
         Server server = new Server();
-        server.setUrl("https://ms-api-1-production.up.railway.app/");
+        server.setUrl("https://ms-api-1-production.up.railway.app");
 
         return new OpenAPI().info(new Info()
         .title("Microservicio Tareas")
