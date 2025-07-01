@@ -14,13 +14,4 @@ public class TareasApplication implements WebMvcConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(TareasApplication.class, args);
 	}
-
-	@Override
-    public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/**")
-        .allowedOrigins("*")
-        .allowedMethods("GET", "POST", "PUT", "OPTIONS", "DELETE")
-        .allowedHeaders("*")
-        .allowCredentials(true);
-	}
 }
