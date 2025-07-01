@@ -18,7 +18,7 @@ public class TareasApplication implements WebMvcConfigurer {
 	@Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**")
-        .allowedOrigins("https://ms-gateway-production-97bb.up.railway.app")
+        .allowedOrigins("*")
         .allowedMethods("GET", "POST", "PUT", "OPTIONS", "DELETE")
         .allowedHeaders("*")
         .allowCredentials(true);
