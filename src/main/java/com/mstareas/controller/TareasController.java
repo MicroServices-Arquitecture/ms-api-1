@@ -31,6 +31,7 @@ public class TareasController {
 
     private final TareasService service;
 
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @GetMapping("/tasks")
     @Operation(summary = "Show all Task", description = "Show all Task in BD")
     public ResponseEntity<List<Tasks>> getTasks() {
@@ -43,7 +44,7 @@ public class TareasController {
             return ResponseEntity.ok(Collections.emptyList());
         }
     }
-
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @GetMapping("/tasks/id/{taskId}")
     @Operation(summary = "Get record for id", description = "Show 1 task pro id")
     public ResponseEntity<Tasks> getTask(@PathVariable String taskId) {
@@ -56,7 +57,7 @@ public class TareasController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @GetMapping("/tasks/name/{name}")
     @Operation(summary = "Get record for name", description = "Show 1 task pro name")
     public ResponseEntity<Tasks> getName(@RequestParam String taskName) {
@@ -70,6 +71,7 @@ public class TareasController {
         }
     }
     
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @DeleteMapping("/tasks/{taskId}")
     @Operation(summary = "Delete a record pro id")
     public ResponseEntity<Void> deleteTask(@PathVariable String taskId){
@@ -82,7 +84,7 @@ public class TareasController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @PostMapping("/tasks")
     @Operation(summary = "Created a new record")
     public ResponseEntity<Tasks> createTask(@RequestBody CreateTaskResquest request) {
@@ -95,7 +97,7 @@ public class TareasController {
                return ResponseEntity.notFound().build();
         } 
     }
-
+    @CrossOrigin(origins = "https://react-front-microservicios-production.up.railway.app")
     @PutMapping("/tasks/{taskId}")
     @Operation(summary = "Update a record pro id")
     public ResponseEntity<Tasks> updateTask(@PathVariable String taskId, @RequestBody CreateTaskResquest request) {

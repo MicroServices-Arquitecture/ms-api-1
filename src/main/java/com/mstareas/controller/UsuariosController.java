@@ -29,6 +29,7 @@ public class UsuariosController {
     }
 
     // Crear nuevo usuario
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app")
     @PostMapping("/taskuser")
     @Operation(summary = "Create a new record")
     public ResponseEntity<UsuarioDTO> createUser(@RequestBody UsuariosRequest dto) {
@@ -37,6 +38,7 @@ public class UsuariosController {
     }
 
     // Listar todos los usuarios
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app/")
     @GetMapping("/taskuser")
     @Operation(summary = "Get all records")
     public List<UsuarioDTO> listAll() {
@@ -46,6 +48,7 @@ public class UsuariosController {
     }
 
     // Buscar por id
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app/")
     @GetMapping("/taskuser/id/{id}")
     @Operation(summary = "Get 1 record per id")
     public ResponseEntity<UsuarioDTO> getUser(@PathVariable Long id) {
@@ -55,6 +58,7 @@ public class UsuariosController {
     }
 
     // Buscar por name
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app/")
     @GetMapping("/taskuser/name/{name}")
     @Operation(summary = "Get 1 record per name")
     public ResponseEntity <UsuarioDTO> getName(@RequestParam String name) {
@@ -64,6 +68,7 @@ public class UsuariosController {
     }
 
     // Actualizar usuario
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app/")
     @PutMapping("/taskuser/id/{id}")
     @Operation(summary = "Update a record per id")
     public ResponseEntity<UsuarioDTO> updateUser(@PathVariable Long id, @RequestBody UsuariosRequest dto) {
@@ -76,6 +81,7 @@ public class UsuariosController {
     }
 
     // Eliminar usuario
+    @CrossOrigin(origins = "https://ms-gateway-production-97bb.up.railway.app/")
     @DeleteMapping("/taskuser/{id}")
     @Operation(summary = "Delete a record per id")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
